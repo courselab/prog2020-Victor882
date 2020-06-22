@@ -19,7 +19,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 255
+#define MAX "255"
 
 /* Write the number 'n' in Roman numerals.*/
 
