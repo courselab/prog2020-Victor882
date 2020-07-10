@@ -23,9 +23,14 @@
 
 /* Write the number 'n' in Roman numerals.*/
 
+ int np (char c)
+{
+
+}  
+
 int pitagorean (char *s)
 {
-  return 0;
+
 }
 
 /* Do not edit function main. */

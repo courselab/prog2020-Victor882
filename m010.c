@@ -30,7 +30,58 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+
+int j = 0;
+int k[12];
+int tot = 0;
+
+  k[0]=31;
+  k[1]=29;
+  k[2]=31;
+  k[3]=30;
+  k[4]=31;
+  k[5]=30;
+  k[6]=31;
+  k[7]=31;
+  k[8]=30;
+  k[9]=31;
+  k[10]=30;
+  k[11]=31;
+
+  while(j<month-1)
+{
+  tot= tot+ k[j];
+  j++;
+}
+  tot=tot+ day;
+  switch(tot%7)
+{
+  case 6:
+    return mon;
+    break;
+    case 5:
+    return sun;
+    break;
+    case 4:
+    return sat;
+    break;
+    case 3:
+    return fri;
+    break;
+    case 2:
+    return thu;
+    break;
+    case 1:
+    return wed;
+    break;
+    case 0:
+    return tue;
+    break; 
+    default:
+    return 0;
+    break;  
+}
+
 }
 
 /* Do not edit function main. */
